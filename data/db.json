@@ -88,5 +88,43 @@
       "cardNumber": "3778 **** **** 9012",
       "color": "text-black"
     }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Livia Bator",
+      "role": "CEO",
+      "image": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Randy Press",
+      "role": "Director",
+      "image": "https://i.pravatar.cc/150?img=2"
+    },
+    {
+      "id": 3,
+      "name": "Workman",
+      "role": "Designer",
+      "image": "https://i.pravatar.cc/150?img=3"
+    },
+    {
+      "id": 4,
+      "name": "Abdulrazaq Haroon",
+      "role": "Software Engineer",
+      "image": "https://i.pravatar.cc/150?img=4"
+    },
+    {
+      "id": 5,
+      "name": "John Doe",
+      "role": "CEO",
+      "image": "https://i.pravatar.cc/150?img=5"
+    },
+    {
+      "id": 6,
+      "name": "Challotte",
+      "role": "Hiring Manager",
+      "image": "https://i.pravatar.cc/150?img=6"
+    }
   ]
 }

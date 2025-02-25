@@ -6,8 +6,10 @@ export default {
       textColor: {
         skin: {
           black: 'var(--black)',
+          white: 'var(--white)',
           base: 'var(--color-text-base)',
           muted: 'var(--color-text-muted)',
+          accent: 'var(--accent)',
           sharp: 'var(--color-text-sharp)',
           gray: 'var(--color-bg-gray)',
           'not-active': 'var(--not-active)',
@@ -16,9 +18,11 @@ export default {
       backgroundColor: {
         skin: {
           black: 'var(--black)',
+          white: 'var(--white)',
           gray: 'var(--color-bg-gray)',
           muted: 'var(--color-text-muted)',
           lavender: 'var(--color-bg-lavender)',
+          brown: 'var(--brown)',
         },
       },
       backgroundImage: {

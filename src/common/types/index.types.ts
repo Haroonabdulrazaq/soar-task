@@ -16,3 +16,10 @@ export type Card = {
   cardChip: string;
   masterCardLogo: string;
 };
+
+export type Profile = {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+};

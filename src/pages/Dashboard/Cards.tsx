@@ -44,7 +44,7 @@ const Cards = () => {
           cards.map((card, index) => (
             <div
               key={index}
-              className={`min-w-[320px] min-h-[200px] ${card.color} flex flex-col justify-between rounded-2xl`}
+              className={`min-w-[320px] min-h-[200px] ${card.color} flex flex-col justify-between rounded-2xl border border-skin-lavender`}
             >
               {/* Top section */}
               <div

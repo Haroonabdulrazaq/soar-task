@@ -6,7 +6,7 @@
   :root {
     --primary: #007bff;
     --secondary: #6c757d;
-    --accent: #f8f9fa;
+    --accent: #718ebf;
     --black: #232323;
     --white: #ffffff;
     --not-active: #b1b1b1;
@@ -16,6 +16,7 @@
     --color-bg-gray: #f5f7fa;
     --color-bg-lavender: #5b5a6f;
     --color-bg-dirty-white: #dfeaf2;
+    --brown: #e7e4e8cc;
   }
 }
 

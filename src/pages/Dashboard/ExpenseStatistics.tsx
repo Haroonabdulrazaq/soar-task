@@ -25,6 +25,7 @@ const options = {
           distance: -65,
           style: {
             fontSize: '0.8em',
+            color: '#ffffff',
             fontWeight: 'normal',
             textOutline: 'none',
             opacity: 1,
@@ -37,7 +38,9 @@ const options = {
           style: {
             fontSize: '0.8em',
             textOutline: 'none',
-            opacity: 0.7,
+            fontWeight: 'normal',
+            color: '#ffffff',
+            opacity: 1,
           },
           filter: {
             operator: '>',
