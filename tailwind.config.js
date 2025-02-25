@@ -15,9 +15,21 @@ export default {
       },
       backgroundColor: {
         skin: {
+          black: 'var(--black)',
           gray: 'var(--color-bg-gray)',
           muted: 'var(--color-text-muted)',
+          lavender: 'var(--color-bg-lavender)',
         },
+      },
+      backgroundImage: {
+        'gradient-right-lavender':
+          'linear-gradient(to right, var(--color-bg-lavender), var(--black))',
+        'gradient-bottom-lavender':
+          'linear-gradient(to bottom, var(--color-bg-lavender), var(--black))',
+        'gradient-right-dirty-white':
+          'linear-gradient(to right, var(--white), var(--white))',
+        'gradient-bottom-dirty-white':
+          'linear-gradient(to bottom, var(--white), var(--white))',
       },
     },
   },

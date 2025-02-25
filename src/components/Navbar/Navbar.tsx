@@ -3,13 +3,23 @@ import { LuBellDot } from 'react-icons/lu';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoSearchOutline } from 'react-icons/io5';
 import christinaThumbnail from '../../assets/images/christina-thumbnail.png';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full sm:w-[90%] ml-auto px-4">
+    <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full sm:w-[85%] ml-auto px-4">
       <div className="flex items-center justify-between px-4 py-2 sm:py-0 w-full">
         <div className="flex items-center gap-3 sm:flex-initial flex-1">
-          <button className="sm:hidden btn btn-ghost btn-sm p-0">
+          <button
+            className="sm:hidden btn btn-ghost btn-sm p-0"
+            onClick={toggleMenu}
+          >
             <GiHamburgerMenu className="text-gray-600" size={20} />
           </button>
           <span className="font-medium text-skin-base inter-500 text-[20px] sm:text-left sm:text-[28px] text-center flex-1 sm:flex-initial">
@@ -22,7 +32,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search for something"
-              className="input w-[250px] pl-10 h-9 rounded-full bg-skin-gray"
+              className="input w-[250px] pl-10 h-9 rounded-full bg-skin-gray hover:border-blue-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
               aria-label="Search input"
             />
           </div>
