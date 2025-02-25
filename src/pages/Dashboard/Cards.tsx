@@ -57,10 +57,10 @@ const Cards = () => {
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <p className="  text-11px sm:text-[12px] opacity-80">
+                    <p className="text-11px sm:text-[12px] opacity-80 lato-regular">
                       Balance
                     </p>
-                    <p className="text-[16px] sm:text-[20px] font-semibold">
+                    <p className="text-[16px] sm:text-[20px] lato-semibold">
                       ${card.balance.toLocaleString()}
                     </p>
                   </div>
@@ -78,18 +78,18 @@ const Cards = () => {
 
                 <div className="flex justify-start items-center gap-4">
                   <div>
-                    <p className="font-[400] text-[10px] sm:text-[12px] opacity-80 font-lato">
+                    <p className="font-[400] text-[10px] sm:text-[12px] opacity-80 lato-regular">
                       CARD HOLDER
                     </p>
-                    <p className="font-medium text-[13px] sm:text-[15px] font-semibold">
+                    <p className="font-medium text-[13px] sm:text-[15px] lato-semibold">
                       {card.cardHolder}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs opacity-80 font-normal text-[10px] sm:text-[12px]">
+                    <p className="text-xs opacity-80 font-normal text-[10px] sm:text-[12px] lato-regular">
                       VALID THRU
                     </p>
-                    <p className="font-medium text-[13px] sm:text-[15px] font-semibold">
+                    <p className="font-medium text-[13px] sm:text-[15px] lato-semibold">
                       {card.validThru}
                     </p>
                   </div>
@@ -101,7 +101,9 @@ const Cards = () => {
                 className={`p-6 rounded-b-2xl ${card.color === 'text-white' ? 'bg-gradient-right-lavender' : 'bg-gradient-right-dirty-white'} border-skin-gray`}
               >
                 <div className="flex justify-between items-center">
-                  <p className="font-medium">{card.cardNumber}</p>
+                  <p className="font-medium lato-semibold text-[15px] sm:text-[22px]">
+                    {card.cardNumber}
+                  </p>
                   <img
                     src={
                       card.color === 'text-white'

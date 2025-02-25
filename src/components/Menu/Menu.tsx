@@ -34,7 +34,7 @@ const Menu = () => {
   ];
 
   return (
-    <div className="hidden md:flex flex-col fixed left-0 top-0 w-[15%] h-screen bg-white border border-blue-500 cursor-pointer">
+    <div className="hidden md:flex flex-col fixed left-0 top-0 w-[15%] h-screen bg-white cursor-pointer">
       <div className="flex items-center gap-2 p-4 h-[8vh]">
         <BsFillClipboardCheckFill size={25} />
         <span className="hidden sm:block text-[25px] inter-800 line-height-1 text-skin-base">
