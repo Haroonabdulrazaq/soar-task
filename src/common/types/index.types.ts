@@ -15,6 +15,4 @@ export type Card = {
   color: string;
   cardChip: string;
   masterCardLogo: string;
-  bgTopColor: string;
-  bgBottomColor: string;
 };

@@ -38,11 +38,19 @@ const Navbar = () => {
           </div>
 
           <button className="btn btn-circle btn-sm bg-skin-gray">
-            <IoSettingsOutline size={20} className="text-skin-muted" />
+            <IoSettingsOutline
+              size={20}
+              className="text-skin-muted"
+              title="Settings"
+            />
           </button>
 
           <button className="btn btn-circle btn-sm bg-skin-gray">
-            <LuBellDot size={20} className="text-skin-sharp" />
+            <LuBellDot
+              size={20}
+              className="text-skin-sharp"
+              title="Notifications"
+            />
           </button>
 
           <div className="avatar cursor-pointer">
@@ -50,6 +58,7 @@ const Navbar = () => {
               <img
                 src={christinaThumbnail}
                 alt="Profile"
+                title="Profile picture"
                 className="object-cover"
                 aria-label="Profile picture"
               />
