@@ -35,11 +35,12 @@ jobs:
           name: Format Check & Fix
           command: npx prettier --write .
 
+      # If format or lint fails, do not proceed
       - run:
           name: Lint Check
           command: npx eslint .
+          when: on_success
 
-      # If format or lint fails, do not proceed
       - run:
           name: Run Tests
           command: npm test
