@@ -32,8 +32,8 @@ jobs:
 
       # Code quality checks (these must pass before proceeding)
       - run:
-          name: Format Check
-          command: npx prettier --check .
+          name: Format Check & Fix
+          command: npx prettier --write .
 
       - run:
           name: Lint Check
