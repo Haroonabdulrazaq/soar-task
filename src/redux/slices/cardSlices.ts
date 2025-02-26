@@ -17,12 +17,8 @@ const initialState: ICard = {
 export const fetchCards = createAsyncThunk<Card[]>(
   'cards/fetchCards',
   async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/cards');
-      return response.data;
-    } catch (error) {
-      throw error;
-    }
+    const response = await axios.get('http://localhost:3000/cards');
+    return response.data;
   },
 );
 
