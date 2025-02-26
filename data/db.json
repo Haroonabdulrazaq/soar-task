@@ -1,0 +1,144 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "icon": "PiCards",
+      "title": "Deposit from my Card",
+      "date": "28 January 2021",
+      "amount": -850,
+      "bgColor": "#FFF5D9",
+      "iconColor": "#FFBB38"
+    },
+    {
+      "id": 2,
+      "icon": "PiPaypalLogoThin",
+      "title": "Deposit Paypal",
+      "date": "25 January 2021",
+      "amount": 2500,
+      "bgColor": "#E7EDFF",
+      "iconColor": "#396AFF"
+    },
+    {
+      "id": 3,
+      "icon": "PiCurrencyCircleDollarLight",
+      "title": "Jemi Wilson",
+      "date": "21 January 2021",
+      "amount": 5400,
+      "bgColor": "#DCFAF8",
+      "iconColor": "#16DBCC"
+    },
+    {
+      "id": 4,
+      "icon": "PiCards",
+      "title": "Deposit from my Card",
+      "date": "28 February 2025",
+      "amount": -250,
+      "bgColor": "#FFF5D9",
+      "iconColor": "#FFBB38"
+    },
+    {
+      "id": 5,
+      "icon": "PiPaypalLogoThin",
+      "title": "Deposit Paypal",
+      "date": "15 February 2025",
+      "amount": 2500,
+      "bgColor": "#E7EDFF",
+      "iconColor": "#396AFF"
+    },
+    {
+      "id": 6,
+      "icon": "PiCurrencyCircleDollarLight",
+      "title": "Jemi Wilson",
+      "date": "14 February 2025",
+      "amount": -54.99,
+      "bgColor": "#DCFAF8",
+      "iconColor": "#16DBCC"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "balance": 5756,
+      "cardHolder": "Eddy Cusuma",
+      "validThru": "12/22",
+      "cardNumber": "3778 **** **** 1234",
+      "color": "text-white"
+    },
+    {
+      "id": 2,
+      "balance": 3400,
+      "cardHolder": "Sarah Miller",
+      "validThru": "09/24",
+      "cardNumber": "3778 **** **** 5678",
+      "color": "text-black"
+    },
+    {
+      "id": 3,
+      "balance": 8900,
+      "cardHolder": "John Smith",
+      "validThru": "03/23",
+      "cardNumber": "3778 **** **** 9012",
+      "color": "text-white"
+    },
+    {
+      "id": 4,
+      "balance": 8900,
+      "cardHolder": "John Smith",
+      "validThru": "03/23",
+      "cardNumber": "3778 **** **** 9012",
+      "color": "text-black"
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Livia Bator",
+      "role": "CEO",
+      "image": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Randy Press",
+      "role": "Director",
+      "image": "https://i.pravatar.cc/150?img=2"
+    },
+    {
+      "id": 3,
+      "name": "Workman",
+      "role": "Designer",
+      "image": "https://i.pravatar.cc/150?img=3"
+    },
+    {
+      "id": 4,
+      "name": "Abdulrazaq",
+      "role": "Software Engineer",
+      "image": "https://i.pravatar.cc/150?img=4"
+    },
+    {
+      "id": 5,
+      "name": "John Doe",
+      "role": "CEO",
+      "image": "https://i.pravatar.cc/150?img=5"
+    },
+    {
+      "id": 6,
+      "name": "Challotte",
+      "role": "Hiring Manager",
+      "image": "https://i.pravatar.cc/150?img=6"
+    }
+  ],
+  "weeklyActivities": {
+    "type": "column",
+    "xCategories": ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+    "accessibilityDescription": "Days",
+    "valueSuffix": "USD",
+    "Desposit": {
+      "name": "Deposit",
+      "data": [250, 154, 275, 389, 239, 236, 374]
+    },
+    "Withdraw": {
+      "name": "Withdraw",
+      "data": [495, 350, 345, 450, 180, 390, 400]
+    }
+  }
+}
