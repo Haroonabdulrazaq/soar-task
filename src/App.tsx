@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Menu from './components/Menu/Menu';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
+import ComingSoon from './components/ComingSoon/ComingSoon';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/setting" element={<Settings />} />
+        <Route path="*" element={<ComingSoon />} />
       </Routes>
     </Router>
   );

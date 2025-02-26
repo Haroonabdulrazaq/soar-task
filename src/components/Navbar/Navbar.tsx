@@ -4,9 +4,15 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoSearchOutline } from 'react-icons/io5';
 import christinaThumbnail from '../../assets/images/christina-thumbnail.png';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const pageName = location.pathname.split('/')[1];
+  const pageNameCapitalized =
+    pageName.charAt(0).toUpperCase() + pageName.slice(1);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +29,7 @@ const Navbar = () => {
             <GiHamburgerMenu className="text-gray-600" size={20} />
           </button>
           <span className="font-medium text-skin-base inter-500 text-[20px] sm:text-left sm:text-[28px] text-center flex-1 sm:flex-initial">
-            Overview
+            {pageNameCapitalized == '' ? 'Overview' : pageNameCapitalized}
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-6">

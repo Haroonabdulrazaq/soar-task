@@ -30,7 +30,7 @@ const Menu = () => {
     { path: '/loans', icon: <FaHandHoldingUsd />, label: 'Loans' },
     { path: '/services', icon: <HiWrenchScrewdriver />, label: 'Services' },
     { path: '/privileges', icon: <MdStars />, label: 'My Privileges' },
-    { path: '/settings', icon: <TbSettingsFilled />, label: 'Settings' },
+    { path: '/setting', icon: <TbSettingsFilled />, label: 'Setting' },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Menu = () => {
             className={`flex items-center gap-3 px-4 py-3 transition-colors
               ${
                 location.pathname === item.path
-                  ? 'text-skin-black border-l-4 border-black rounded-sm border-0 border-l-4 inset-0 transition-all duration-800'
+                  ? 'text-skin-black border-black rounded-sm border-0 border-l-4 inset-0 transition-all duration-800'
                   : 'text-skin-not-active'
               }`}
           >
@@ -64,3 +64,5 @@ const Menu = () => {
 };
 
 export default Menu;
+
+//

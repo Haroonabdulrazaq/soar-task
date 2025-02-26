@@ -22,7 +22,7 @@ const options = {
       dataLabels: [
         {
           enabled: true,
-          distance: -65,
+          distance: -60,
           style: {
             fontSize: '0.8em',
             color: '#ffffff',

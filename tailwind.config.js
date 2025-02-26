@@ -35,6 +35,15 @@ export default {
         'gradient-bottom-dirty-white':
           'linear-gradient(to bottom, var(--white), var(--white))',
       },
+      animation: {
+        shimmer: 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
+        },
+      },
     },
   },
   plugins: [require('daisyui')],
