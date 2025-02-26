@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Profile } from '../../common/types/index.types';
 
+const apiUrl = import.meta.env.VITE_API_URL;
 interface IProfile {
   profiles: Profile[];
   loading: boolean;
@@ -17,7 +18,7 @@ const initialState: IProfile = {
 export const fetchProfiles = createAsyncThunk<Profile[]>(
   'profiles/fetchProfiles',
   async () => {
-    const response = await axios.get('http://localhost:3000/profiles');
+    const response = await axios.get(`${apiUrl}/profiles`);
     return response.data;
   },
 );

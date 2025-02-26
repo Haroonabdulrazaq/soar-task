@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Card } from '../../common/types/index.types';
 import axios from 'axios';
 
+const apiUrl = import.meta.env.VITE_API_URL;
 interface ICard {
   cards: Card[];
   loading: boolean;
@@ -17,7 +18,7 @@ const initialState: ICard = {
 export const fetchCards = createAsyncThunk<Card[]>(
   'cards/fetchCards',
   async () => {
-    const response = await axios.get('http://localhost:3000/cards');
+    const response = await axios.get(`${apiUrl}/cards`);
     return response.data;
   },
 );

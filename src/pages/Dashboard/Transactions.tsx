@@ -56,8 +56,8 @@ const Transactions = () => {
               <p
                 className={`font-semibold ${transaction.amount > 0 ? 'text-green-500' : 'text-red-500'}`}
               >
-                {transaction.amount > 0 ? '+$' : '$'}
-                {transaction.amount.toLocaleString()}
+                {transaction.amount > 0 ? '+$' : '-$'}
+                {Math.abs(transaction.amount).toLocaleString()}
               </p>
             </div>
           ))}

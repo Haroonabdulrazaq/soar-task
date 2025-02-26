@@ -23,3 +23,18 @@ export type Profile = {
   role: string;
   image: string;
 };
+
+export type WeeklyActivity = {
+  type: string;
+  xCategories: string[];
+  accessibilityDescription: string;
+  valueSuffix: string;
+  Desposit: {
+    name: string;
+    data: number[];
+  };
+  Withdraw: {
+    name: string;
+    data: number[];
+  };
+};

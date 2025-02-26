@@ -3,6 +3,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { GrEdit } from 'react-icons/gr';
 import profilePicture from '../../assets/images/christina-thumbnail.png';
+import { MdArrowDropDown } from 'react-icons/md';
+
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   username: z.string().min(1, 'Username is required'),
@@ -135,14 +137,27 @@ const EditProfile = () => {
         <div className="form-group">
           <label htmlFor="dateOfBirth" className="block mb-2">
             Date of Birth
-            <input
-              {...register('dateOfBirth')}
-              type="date"
-              id="dateOfBirth"
-              placeholder="2025-01-01"
-              className="mt-1 block w-full pl-10 h-9 rounded-md  border border-color-bg-dirty-white shadow-sm  hover:border-blue-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
-              aria-label="Select your date of birth"
-            />
+            <div className="relative">
+              <input
+                {...register('dateOfBirth')}
+                type="date"
+                id="dateOfBirth"
+                placeholder="2025-01-01"
+                className="mt-1 block w-full pl-10 h-9 rounded-md border border-color-bg-dirty-white shadow-sm hover:border-blue-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors appearance-none"
+                aria-label="Select your date of birth"
+                style={{ colorScheme: 'normal' }}
+              />
+              <div
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+                onClick={() =>
+                  (
+                    document.getElementById('dateOfBirth') as HTMLInputElement
+                  ).showPicker()
+                }
+              >
+                <MdArrowDropDown className="text-gray-500 text-xl" />
+              </div>
+            </div>
           </label>
           {errors.dateOfBirth && (
             <p className="text-red-500 text-sm mt-1">

@@ -126,5 +126,19 @@
       "role": "Hiring Manager",
       "image": "https://i.pravatar.cc/150?img=6"
     }
-  ]
+  ],
+  "weeklyActivities": {
+    "type": "column",
+    "xCategories": ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+    "accessibilityDescription": "Days",
+    "valueSuffix": "USD",
+    "Desposit": {
+      "name": "Deposit",
+      "data": [250, 154, 275, 389, 239, 236, 374]
+    },
+    "Withdraw": {
+      "name": "Withdraw",
+      "data": [495, 350, 345, 450, 180, 390, 400]
+    }
+  }
 }

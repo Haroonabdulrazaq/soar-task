@@ -14,7 +14,7 @@ const Settings = () => {
   ] as const;
 
   return (
-    <div className="flex flex-col sm:ml-[15%] min-h-auto gap-6 p-6 bg-skin-gray">
+    <div className="flex flex-col sm:ml-[15%] min-h-screen gap-6 p-6 bg-skin-gray">
       <div className="bg-skin-white rounded-lg p-8">
         {/* Tabs */}
         <div className="border-b ">

@@ -1,3 +1,4 @@
+import ErrorBoundary from '../../components/ErrorBoundary';
 import BalanceHistory from './BalanceHistory';
 import Cards from './Cards';
 import ExpenseStatistics from './ExpenseStatistics';
@@ -17,7 +18,9 @@ const Dashboard = () => {
           <h2 className="text-skin-base text-[16px] sm:text-[22px] inter-600 mb-4">
             Weekly Activity
           </h2>
-          <WeeklyActivities />
+          <ErrorBoundary fallback={<div>Error loading Weekly Activities</div>}>
+            <WeeklyActivities />
+          </ErrorBoundary>
         </div>
         <div className="flex flex-col w-full sm:w-1/3">
           <h2 className="text-skin-base text-[16px] sm:text-[22px] inter-600 mb-4">

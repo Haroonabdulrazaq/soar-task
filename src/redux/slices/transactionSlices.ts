@@ -2,6 +2,7 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Transaction } from '../../common/types/index.types';
 
+const apiUrl = import.meta.env.VITE_API_URL;
 interface ITransactionState {
   transactions: Transaction[];
   loading: boolean;
@@ -14,12 +15,10 @@ const initialState: ITransactionState = {
   error: null,
 };
 
-export const fetchTransactions = createAsyncThunk(
+export const fetchTransactions = createAsyncThunk<Transaction[]>(
   'transactions/fetchTransactions',
   async () => {
-    const response = await axios.get<Transaction[]>(
-      'http://localhost:3000/transactions',
-    );
+    const response = await axios.get<Transaction[]>(`${apiUrl}/transactions`);
     return response.data;
   },
 );
