@@ -7,15 +7,17 @@ interface Props {
 
 interface State {
   hasError: boolean;
+  error: Error | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
+    error: null,
   };
 
-  public static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
+  public static getDerivedStateFromError(error: Error): State {
+    return { error, hasError: true };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
