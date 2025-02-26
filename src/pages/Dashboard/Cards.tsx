@@ -20,7 +20,7 @@ const Cards = () => {
 
   useEffect(() => {
     dispatch(fetchCards());
-  }, []);
+  }, [dispatch]);
 
   if (cardLoading) return <p>Loading cards...</p>;
   if (cardError) return <p>Error: {cardError}</p>;

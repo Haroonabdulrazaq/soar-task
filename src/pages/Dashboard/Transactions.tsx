@@ -16,7 +16,7 @@ const Transactions = () => {
 
   useEffect(() => {
     dispatch(fetchTransactions());
-  }, []);
+  }, [dispatch]);
 
   if (transactionLoading) return <p>Loading transactions...</p>;
   if (transactionError) return <p>Error: {transactionError}</p>;

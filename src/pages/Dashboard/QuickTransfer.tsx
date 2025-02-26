@@ -23,7 +23,7 @@ const QuickTransfer = () => {
 
   useEffect(() => {
     dispatch(fetchProfiles());
-  }, []);
+  }, [dispatch]);
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
