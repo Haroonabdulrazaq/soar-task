@@ -17,14 +17,10 @@ const initialState: ITransactionState = {
 export const fetchTransactions = createAsyncThunk(
   'transactions/fetchTransactions',
   async () => {
-    try {
-      const response = await axios.get<Transaction[]>(
-        'http://localhost:3000/transactions',
-      );
-      return response.data;
-    } catch (error) {
-      throw error;
-    }
+    const response = await axios.get<Transaction[]>(
+      'http://localhost:3000/transactions',
+    );
+    return response.data;
   },
 );
 
