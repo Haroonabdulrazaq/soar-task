@@ -29,7 +29,7 @@ export type WeeklyActivity = {
   xCategories: string[];
   accessibilityDescription: string;
   valueSuffix: string;
-  Desposit: {
+  Deposit: {
     name: string;
     data: number[];
   };
@@ -37,4 +37,20 @@ export type WeeklyActivity = {
     name: string;
     data: number[];
   };
+};
+
+export type ExpenseStatistics = {
+  name: string;
+  y: number;
+  sliced: boolean;
+  selected: boolean;
+  color: string;
+};
+
+export type BalanceHistory = {
+  categories: string[];
+  description: string;
+  name: string;
+  data: number[];
+  fillOpacity: number;
 };

@@ -8,7 +8,7 @@ import WeeklyActivities from './WeeklyActivities';
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col sm:ml-[15%] min-h-screen gap-6 p-6 sm:bg-skin-gray">
+    <div className="flex flex-col lg:ml-[15%] min-h-screen gap-6 p-6 sm:bg-skin-gray">
       <div className="flex flex-col sm:flex-row w-full gap-6">
         <Cards />
         <Transactions />
