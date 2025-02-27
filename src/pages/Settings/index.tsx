@@ -23,7 +23,7 @@ const Settings = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-0 px-2 relative ${
+                className={`py-0 px-2 text-[13px] sm:text-[16px] relative ${
                   activeTab === tab.id
                     ? 'text-skin-black after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-black after:transition-all after:duration-800'
                     : 'text-skin-not-active hover:text-skin-black'

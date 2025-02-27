@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "server": "npx json-server --watch ./data/db.json --port 3000",
-    "start": "npm run dev && npm run server",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

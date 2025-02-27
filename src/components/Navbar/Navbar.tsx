@@ -1,22 +1,24 @@
+import { useEffect } from 'react';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { LuBellDot } from 'react-icons/lu';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoSearchOutline } from 'react-icons/io5';
 import christinaThumbnail from '../../assets/images/christina-thumbnail.png';
-import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+// State Management
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleMenu } from '../../redux/slices/navbarSlices';
+import { AppDispatch, RootState } from '../../redux/store';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dispatch = useDispatch<AppDispatch>();
 
   const location = useLocation();
   const pageName = location.pathname.split('/')[1];
   const pageNameCapitalized =
     pageName.charAt(0).toUpperCase() + pageName.slice(1);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const isMenuOpen = useSelector((state: RootState) => state.navbar.isMenuOpen);
 
   return (
     <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full sm:w-[85%] ml-auto px-4">
@@ -24,7 +26,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 sm:flex-initial flex-1">
           <button
             className="sm:hidden btn btn-ghost btn-sm p-0"
-            onClick={toggleMenu}
+            onClick={() => dispatch(toggleMenu(true))}
           >
             <GiHamburgerMenu className="text-gray-600" size={20} />
           </button>
@@ -43,13 +45,15 @@ const Navbar = () => {
             />
           </div>
 
-          <button className="btn btn-circle btn-sm bg-skin-gray">
-            <IoSettingsOutline
-              size={20}
-              className="text-skin-muted"
-              title="Settings"
-            />
-          </button>
+          <Link to="/setting">
+            <button className="btn btn-circle btn-sm bg-skin-gray">
+              <IoSettingsOutline
+                size={20}
+                className="text-skin-muted"
+                title="Settings"
+              />
+            </button>
+          </Link>
 
           <button className="btn btn-circle btn-sm bg-skin-gray">
             <LuBellDot

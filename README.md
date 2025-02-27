@@ -1,11 +1,10 @@
-# React + TypeScript + Vite
+# Soar Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## The API Mock
 
-Currently, two official plugins are available:
+The API mock is hosted on replit and can be accessed at [https://e17d1645-07b6-4b45-930c-b06afdea60e7-00-h8xqi7occwjo.kirk.replit.dev](https://e17d1645-07b6-4b45-930c-b06afdea60e7-00-h8xqi7occwjo.kirk.replit.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## The Task
 
 ## Expanding the ESLint configuration
 
@@ -22,7 +21,7 @@ export default tseslint.config({
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -31,7 +30,7 @@ export default tseslint.config({
 
 ```js
 // eslint.config.js
-import react from 'eslint-plugin-react'
+import react from 'eslint-plugin-react';
 
 export default tseslint.config({
   // Set the react version
@@ -46,5 +45,5 @@ export default tseslint.config({
     ...react.configs.recommended.rules,
     ...react.configs['jsx-runtime'].rules,
   },
-})
+});
 ```
