@@ -1,8 +1,16 @@
 # Soar Task
 
-Soar Task is a beautiful fintech application built to transfer money between profiles. It is built with React, TypeScript, and Tailwind CSS.
+Soar Task is a beautiful fintech application built to transfer money between profiles. It is built with React, Redux, TypeScript, and Tailwind CSS.
 
-## Features
+## Screenshots 📷
+
+![Soar Task](./src/assets/images/soar-task-image.png)
+
+## Video Demo 📷:
+
+[Soar Task](https://drive.google.com/file/d/1HH_jmkdh2-cVaG99HdNd032Psd4r9LFC/view?usp=sharing)
+
+## Features 🚀
 
 - Transfer money between profiles
 - View transaction history
@@ -13,7 +21,7 @@ Soar Task is a beautiful fintech application built to transfer money between pro
 - Edit profile information
 - Add a new profile
 
-## Set up Locally
+## Set up Locally 🔧
 
 1. Clone the repository from [https://github.com/soar-task/soar-task](https://github.com/soar-task/soar-task)
 2. cd into the repository
@@ -45,6 +53,27 @@ Note: Make sure to set up the replit or json-server before running the project l
 
 I set up CI/CD pipline on Circle CI. The pipeline is configured to runs the Formatter and auto-formats, run ESLint to lint the files and check for errors, runs the tests and build the project.
 
-## Hosted on Vercel
+## Hosted on Vercel 🚀
 
-The project is hosted on Vercel. You can access the live site at [https://soar-task.vercel.app/](https://soar-task.vercel.app/)
+The project is hosted on Vercel. You can access the live site at [https://soar-task-xi.vercel.app/](https://soar-task-xi.vercel.app/)
+
+## Deploy 🚀
+
+This project is deployed to [Amazon AWS]()
+
+## Author 👨
+
+👤 **Haroon Abdulrazaq**
+
+- Github: [@githubhandle](https://github.com/Haroonabdulrazaq)
+- Twitter: [@twitterhandle](https://twitter.com/hanq_o)
+- Linkedin: [linkedin](https://www.linkedin.com/in/haroonabdulrazaq)
+- Portfolio: [Portfolio](https://www.haroonabdulrazaq.tech)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
