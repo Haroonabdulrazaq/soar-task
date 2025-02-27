@@ -4,7 +4,6 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { GrEdit } from 'react-icons/gr';
 import profilePicture from '../../assets/images/christina-thumbnail.png';
-import { MdArrowDropDown } from 'react-icons/md';
 import { formSchema } from '../../common/validation';
 import Modal from '../../components/Modal/Modal';
 import { PiCaretDownLight } from 'react-icons/pi';

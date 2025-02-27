@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { LuBellDot } from 'react-icons/lu';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -6,9 +5,9 @@ import { IoSearchOutline } from 'react-icons/io5';
 import christinaThumbnail from '../../assets/images/christina-thumbnail.png';
 import { Link, useLocation } from 'react-router-dom';
 // State Management
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../../redux/slices/navbarSlices';
-import { AppDispatch, RootState } from '../../redux/store';
+import { AppDispatch } from '../../redux/store';
 
 const Navbar = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -17,8 +16,6 @@ const Navbar = () => {
   const pageName = location.pathname.split('/')[1];
   const pageNameCapitalized =
     pageName.charAt(0).toUpperCase() + pageName.slice(1);
-
-  const isMenuOpen = useSelector((state: RootState) => state.navbar.isMenuOpen);
 
   return (
     <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full sm:w-[85%] ml-auto px-4">
