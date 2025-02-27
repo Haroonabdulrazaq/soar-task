@@ -20,6 +20,7 @@ const QuickTransfer = () => {
   const [isError, setIsError] = useState<boolean>(false);
   const [showLeftScroll, setShowLeftScroll] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isSending, setIsSending] = useState<boolean>(false);
 
   useEffect(() => {
     dispatch(fetchProfiles());
@@ -46,7 +47,7 @@ const QuickTransfer = () => {
     }
   };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     setIsError(false);
     if (selectedProfile === null) {
       setIsError(true);
@@ -60,8 +61,18 @@ const QuickTransfer = () => {
     }
 
     if (amount && selectedProfile !== null) {
-      setAmount('');
-      setSelectedProfile(null);
+      setIsSending(true);
+      try {
+        // Simulate API call with timeout
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setAmount('');
+        setSelectedProfile(null);
+      } catch (error) {
+        setIsError(true);
+        setError('Failed to send amount');
+      } finally {
+        setIsSending(false);
+      }
     }
   };
 
@@ -146,10 +157,11 @@ const QuickTransfer = () => {
           )}
           <button
             onClick={handleSend}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-skin-black text-white px-4 py-2 rounded-full flex items-center gap-2 hover:opacity-90"
+            disabled={isSending}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-skin-black text-white px-4 py-2 rounded-full flex items-center gap-2 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span>Send</span>
-            <IoIosPaperPlane />
+            <span>{isSending ? 'Sending...' : 'Send'}</span>
+            <IoIosPaperPlane className={isSending ? 'animate-pulse' : ''} />
           </button>
         </div>
       </div>

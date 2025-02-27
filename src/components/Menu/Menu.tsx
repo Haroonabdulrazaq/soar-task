@@ -46,21 +46,21 @@ const Menu = () => {
     <div
       className={`lg:flex flex-col fixed left-0 top-0 w-[15%] h-screen bg-white cursor-pointer transition-transform duration-300 ease-in-out ${
         isMenuOpen ? 'translate-x-0 w-[70%]' : '-translate-x-full'
-      } md:translate-x-0`}
+      } lg:translate-x-0`}
       style={{ zIndex: 9999 }}
     >
       <div className="flex justify-between items-center gap-2 p-4 h-[8vh]">
         <Link to="/">
           <div className="flex items-center gap-2">
             <BsFillClipboardCheckFill size={25} />
-            <span className="hidden md:block text-[25px] inter-800 line-height-1 text-skin-base">
+            <span className="hidden lg:block text-[25px] inter-800 line-height-1 text-skin-base">
               Soar Task
             </span>
           </div>
         </Link>
         {isMenuOpen && (
           <button
-            className="flex sm:hidden"
+            className="flex lg:hidden"
             onClick={() => dispatch(toggleMenu(false))}
           >
             <IoMdClose size={25} />
@@ -84,7 +84,7 @@ const Menu = () => {
             <span className="text-xl">{item.icon}</span>
             <span
               className={`text-[18px] transition-opacity duration-300 ${
-                isMenuOpen ? 'opacity-100' : 'opacity-0 md:opacity-100'
+                isMenuOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'
               }`}
             >
               {item.label}

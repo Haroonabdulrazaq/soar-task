@@ -12,10 +12,6 @@ const BalanceHistory = () => {
     (state: RootState) => state.graph.balanceHistory,
   );
 
-  console.log('|||||||||||||||||||||||||||||||||||');
-  console.log(data);
-  console.log('|||||||||||||||||||||||||||||||||||');
-
   useEffect(() => {
     dispatch(fetchBalanceHistory());
   }, [dispatch]);

@@ -18,11 +18,11 @@ const Navbar = () => {
     pageName.charAt(0).toUpperCase() + pageName.slice(1);
 
   return (
-    <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full sm:w-[85%] ml-auto px-4">
+    <div className="flex flex-col sm:flex-row h-[15vh] sm:h-[8vh] bg-white shadow-sm w-full lg:w-[85%] ml-auto px-4">
       <div className="flex items-center justify-between px-4 py-2 sm:py-0 w-full">
         <div className="flex items-center gap-3 sm:flex-initial flex-1">
           <button
-            className="sm:hidden btn btn-ghost btn-sm p-0"
+            className="lg:hidden btn btn-ghost btn-sm p-0"
             onClick={() => dispatch(toggleMenu(true))}
           >
             <GiHamburgerMenu className="text-gray-600" size={20} />
