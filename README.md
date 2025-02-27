@@ -6,6 +6,10 @@ Soar Task is a beautiful fintech application built to transfer money between pro
 
 ![Soar Task](./src/assets/images/soar-task-image.png)
 
+## Video Demo 📷:
+
+[Soar Task](https://drive.google.com/file/d/1HH_jmkdh2-cVaG99HdNd032Psd4r9LFC/view?usp=sharing)
+
 ## Features 🚀
 
 - Transfer money between profiles
