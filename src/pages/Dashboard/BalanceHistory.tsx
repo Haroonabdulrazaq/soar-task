@@ -1,7 +1,33 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+// State Management
+import { useSelector, useDispatch } from 'react-redux';
+import { AppDispatch, RootState } from '../../redux/store';
+import { fetchBalanceHistory } from '../../redux/slices/graphSlices';
+import { useEffect } from 'react';
 
 const BalanceHistory = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { data, loading, error } = useSelector(
+    (state: RootState) => state.graph.balanceHistory,
+  );
+
+  console.log('|||||||||||||||||||||||||||||||||||');
+  console.log(data);
+  console.log('|||||||||||||||||||||||||||||||||||');
+
+  useEffect(() => {
+    dispatch(fetchBalanceHistory());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   const options = {
     chart: {
       type: 'area',
@@ -15,10 +41,10 @@ const BalanceHistory = () => {
       enabled: false,
     },
     xAxis: {
-      categories: ['July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      categories: data.categories,
       allowDecimals: false,
       accessibility: {
-        rangeDescription: 'Range: July to Dec.',
+        rangeDescription: data.description,
       },
       labels: {
         align: 'center',
@@ -65,9 +91,9 @@ const BalanceHistory = () => {
     },
     series: [
       {
-        name: 'Balance',
-        data: [155, 362, 256, 400, 457, 800],
-        fillOpacity: 0.1,
+        name: data.name,
+        data: data.data,
+        fillOpacity: data.fillOpacity,
       },
     ],
   };

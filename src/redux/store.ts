@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import transactionsReducer from './slices/transactionSlices';
 import cardsReducer from './slices/cardSlices';
 import profileReducer from './slices/profileSlices';
-import weeklyActivitiesReducer from './slices/weeklyActivitySlices';
+import graphReducer from './slices/graphSlices';
 import navbarReducer from './slices/navbarSlices';
 
 export const store = configureStore({
@@ -10,7 +10,7 @@ export const store = configureStore({
     transactions: transactionsReducer,
     cards: cardsReducer,
     profiles: profileReducer,
-    weeklyActivities: weeklyActivitiesReducer,
+    graph: graphReducer,
     navbar: navbarReducer,
   },
 });
