@@ -45,7 +45,7 @@ const Menu = () => {
   return (
     <div
       className={`lg:flex flex-col fixed left-0 top-0 w-[15%] h-screen bg-white cursor-pointer transition-transform duration-300 ease-in-out ${
-        isMenuOpen ? 'translate-x-0 w-[70%]' : '-translate-x-full'
+        isMenuOpen ? 'translate-x-0 w-[70%] md:w-[30%]' : '-translate-x-full'
       } lg:translate-x-0`}
       style={{ zIndex: 9999 }}
     >

@@ -70,6 +70,7 @@ const QuickTransfer = () => {
       } catch (error) {
         setIsError(true);
         setError('Failed to send amount');
+        throw error;
       } finally {
         setIsSending(false);
       }
