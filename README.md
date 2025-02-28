@@ -26,17 +26,12 @@ Soar Task is a beautiful fintech application built to transfer money between pro
 1. Clone the repository from [https://github.com/soar-task/soar-task](https://github.com/soar-task/soar-task)
 2. cd into the repository
 3. Run `npm install` to install the dependencies
-4. Run `npm run start` to start the app and the json-server simultenously
+4. - Create and add the url in the .env file to the `VITE_API_URL` variable, as we have in the .env.example file
+5. Run `npm run start` to start the app and the json-server simultenously
 
 ## The API Mock
 
-The API mock is hosted on replit and can be accessed at [https://replit.com/@Haroonabdulraza/Moke-API](https://replit.com/@Haroonabdulraza/Moke-API)
-
-- if youre signed up with replit, you can click run to start the server
-- if youre not signed up, you can click the run button and it will ask you to sign up for a replit account
-- once you sign up, you can click run and it will start the server
-- you can use the api mock by sending requests to the url `https://e17d1645-07b6-4b45-930c-b06afdea60e7-00-h8xqi7occwjo.kirk.replit.dev`
-- Create and add the url in the .env file to the `VITE_API_URL` variable, as we have in the .env.example file
+1. The API Mock is hosted on Render: [https://soar-task-api.onrender.com/](https://soar-task-api.onrender.com/)
 
 Note: Make sure to set up the api mock before running the project locally
 
@@ -47,19 +42,25 @@ Note: Make sure to set up the api mock before running the project locally
 - If you don't want to use the api mock, you can use the local json-server by running `npm run start`
   - It will start both the json-server at `http://localhost:3000` and the react app at `http://localhost:5173` concurently
 
-Note: Make sure to set up the replit or json-server before running the project locally
+## Assumptions
+
+- User wants to send money to a profile from the Quick Transfer section
+- The mobile Navigation is used for both tabs and mobile, assuming we will have more tabs and mobile users
+- Use Redux tool kit which is a variance of Redux
+- Add modal to Settings when user click save buttons
+- Made the Setting icon on home page a Link to Settings page
+- All data is store and served using JSON-Server for mocking purposes providing 2 options (either on Replit or locally)
+- Used Icon best fit to the the text when Icon is not found.
+- Used React Hook form with Zod for validation
 
 ## Set up CI/CD Pipeline
 
-I set up CI/CD pipline on Circle CI. The pipeline is configured to runs the Formatter and auto-formats, run ESLint to lint the files and check for errors, runs the tests and build the project.
+I set up CI/CD pipline on Circle CI. The pipeline is configured to runs the Formatter and auto-formats, run ESLint to lint the files and check for errors, and build the project.
 
 ## Hosted on Vercel 🚀
 
 The project is hosted on Vercel. You can access the live site at [https://soar-task-xi.vercel.app/](https://soar-task-xi.vercel.app/)
-
-## Deploy 🚀
-
-This project is deployed to [Amazon AWS]()
+Mock API - is Hosted on Render: https://soar-task-api.onrender.com/
 
 ## Author 👨
 
