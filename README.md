@@ -49,6 +49,17 @@ Note: Make sure to set up the api mock before running the project locally
 
 Note: Make sure to set up the replit or json-server before running the project locally
 
+## Assumptions
+
+- User wants to send money to a profile from the Quick Transfer section
+- The mobile Navigation is used for both tabs and mobile, assuming we will have more tabs and mobile users
+- Use Redux tool kit which is a variance of Redux
+- Add modal to Settings when user click save buttons
+- Made the Setting icon on home page a Link to Settings page
+- All data is store and served using JSON-Server for mocking purposes providing 2 options (either on Replit or locally)
+- Used Icon best fit to the the text when Icon is not found.
+- Used React Hook form with Zod for validation
+
 ## Set up CI/CD Pipeline
 
 I set up CI/CD pipline on Circle CI. The pipeline is configured to runs the Formatter and auto-formats, run ESLint to lint the files and check for errors, runs the tests and build the project.
