@@ -1,7 +1,14 @@
 import { z } from 'zod';
 
 export const formSchema = z.object({
-  name: z.string().trim().min(1, 'Name is required'),
+  name: z
+    .string()
+    .trim()
+    .min(3, 'Name must be at least 3 characters')
+    .regex(
+      /[a-zA-Z][a-zA-Z ]{2,}/,
+      'Name can only contain letters, and underscores',
+    ),
 
   username: z
     .string()
