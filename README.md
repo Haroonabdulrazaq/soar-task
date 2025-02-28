@@ -2,9 +2,13 @@
 
 Soar Task is a beautiful fintech application built to transfer money between profiles. It is built with React, Redux, TypeScript, and Tailwind CSS.
 
+## Live Link 🔗
+
+[Soar Task](https://soar-task-xi.vercel.app/)
+
 ## Screenshots 📷
 
-![Soar Task](./src/assets/images/soar-task-image.png)
+![screenshot](./src/assets/images/soar-task-image.png)
 
 ## Video Demo 📷:
 
