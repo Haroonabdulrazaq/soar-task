@@ -13,6 +13,19 @@ type FormData = z.infer<typeof formSchema>;
 const EditProfile = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
+  const defaultValues = {
+    name: 'Charleen Reed',
+    username: 'Charleen Reed',
+    email: 'charlenereed@gmail.com',
+    password: '******',
+    dateOfBirth: '2025-01-01',
+    presentAddress: 'Sanjose, California, USA',
+    permanentAddress: 'San Jose, California',
+    city: 'San jose',
+    postalCode: '45962',
+    country: 'USA',
+  };
+
   const {
     register,
     handleSubmit,
@@ -20,6 +33,7 @@ const EditProfile = () => {
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
+    defaultValues,
   });
 
   const onSubmit = (data: FormData) => {
