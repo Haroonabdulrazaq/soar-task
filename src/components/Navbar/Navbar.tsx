@@ -43,7 +43,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/setting">
-            <button className="btn btn-circle btn-sm bg-skin-gray">
+            <button className="btn btn-circle btn-sm bg-skin-gray border-none hover:bg-skin-not-active">
               <IoSettingsOutline
                 size={20}
                 className="text-skin-muted"
@@ -52,7 +52,7 @@ const Navbar = () => {
             </button>
           </Link>
 
-          <button className="btn btn-circle btn-sm bg-skin-gray">
+          <button className="btn btn-circle btn-sm bg-skin-gray border-none hover:bg-skin-not-active">
             <LuBellDot
               size={20}
               className="text-skin-sharp"
