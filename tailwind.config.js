@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false,
   theme: {
     extend: {
       textColor: {
@@ -20,6 +21,7 @@ export default {
           black: 'var(--black)',
           white: 'var(--white)',
           gray: 'var(--color-bg-gray)',
+          'not-active': 'var(--not-active)',
           muted: 'var(--color-text-muted)',
           lavender: 'var(--color-bg-lavender)',
           brown: 'var(--brown)',

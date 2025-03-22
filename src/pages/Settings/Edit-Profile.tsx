@@ -306,7 +306,7 @@ const EditProfile = () => {
       {isModalOpen && (
         <Modal
           onClose={() => setIsModalOpen(false)}
-          title="Update Profile"
+          title="Profile Updated"
           description="Your profile has been updated successfully!"
         />
       )}
