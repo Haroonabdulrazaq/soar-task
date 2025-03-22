@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    color-scheme: light;
     --primary: #007bff;
     --secondary: #6c757d;
     --accent: #718ebf;
